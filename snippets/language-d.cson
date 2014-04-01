@@ -1,0 +1,94 @@
+'.source.d':
+  'class … { … }':
+    'prefix': 'class'
+    'body': 'class $1 {\n\tthis($2) {\n\t\t$0\n\t}\n}\n'
+  'constant (private static final)':
+    'prefix': 'ps'
+    'body': 'private static final ${1:char[]} ${2:name} = ${4:"${3:value}"};'
+  'debug { … }':
+    'prefix': 'debug'
+    'body': 'debug {\n\t$0\n}'
+  'debug(module) { … }':
+    'prefix': 'debugm'
+    'body': 'debug($1) {\n\t$0\n}'
+  'enum … { … }':
+    'prefix': 'en'
+    'body': 'enum ${1:name}() { $3 }'
+  'Stderr(format, …)':
+    'prefix': 'errf'
+    'body': 'Stderr.format("${1:foo = {\\}}", $2).newline;'
+  'Stderr(…)':
+    'prefix': 'err'
+    'body': 'Stderr("$1").newline;'
+  'foreach_reverse(e; …) { … }':
+    'prefix': 'fer'
+    'body': 'foreach_reverse(${1:e}; $0) {\n\t\n}'
+  'foreach(e; …) { … }':
+    'prefix': 'fe'
+    'body': 'foreach(${1:e}; $0) {\n\t\n}'
+  'if … else':
+    'prefix': 'ife'
+    'body': 'if(${1:condition}) {\n\t$2\n}\nelse {\n\t$0\n}'
+  'if …':
+    'prefix': 'if'
+    'body': 'if(${1:condition}) {\n\t$0\n}'
+  'import …':
+    'prefix': 'im'
+    'body': 'import ${1:${TM_FILEPATH/.+\\/([^\\/]+)\\/[^\\/]+\\.d$/\\l$1/}.};'
+  'log.error(…)':
+    'prefix': 'loge'
+    'body': 'log.error("$1");'
+  'log.fatal(…)':
+    'prefix': 'logf'
+    'body': 'log.fatal("$1");'
+  'log.info(…)':
+    'prefix': 'log'
+    'body': 'log.info("$1");'
+  'log.trace(…)':
+    'prefix': 'logt'
+    'body': 'log.trace("$1");'
+  'log.warn(…)':
+    'prefix': 'logw'
+    'body': 'log.warn("$1");'
+  'Logger for Module':
+    'prefix': 'logger'
+    'body': 'import tango.util.log.Log, tango.util.log.Configurator;\n\nprotected static Logger log = null;\nstatic this() {\n\tlog = Log.getLogger(${1:__FILE__});${2:\n\t//log.setLevel(log.Level.${3:Info});}\n}'
+  'int main(char[][] args) { … }':
+    'prefix': 'maina'
+    'body': 'int main(char[][] args) {\n\t$1\n\treturn 0;\n}'
+  'void main() { … }':
+    'prefix': 'main'
+    'body': 'void main() {\n\t${1}\n}'
+  'method … { … }':
+    'prefix': 'me'
+    'body': '/**\n * $2\n */\n${1:void} ${2:method}() {\n\t${3}\n}'
+  'Stdout(format, …)':
+    'prefix': 'outf'
+    'body': 'Stdout.format("${1:foo = {\\}}", $2).newline;'
+  'Stdout(…)':
+    'prefix': 'out'
+    'body': 'Stdout("$1").newline;'
+  'return …':
+    'prefix': 'r'
+    'body': 'return $0;'
+  'struct … { … }':
+    'prefix': 'st'
+    'body': '/**\n * $2\n */\nstruct ${1:name}() {\n\t$3\n}'
+  'try … catch … finally':
+    'prefix': 'tcf'
+    'body': 'try {\n\t$2\n} catch (${1:Exception} e) {\n\t$3\n} finally {\n\t$0\n}'
+  'try … catch':
+    'prefix': 'tc'
+    'body': 'try {\n\t$2\n} catch (${1:Exception} e) {\n\t$0\n}'
+  'try … finally':
+    'prefix': 'tf'
+    'body': 'try {\n\t$1\n} finally {\n\t$0\n}'
+  'unittest { … }':
+    'prefix': 'unit'
+    'body': 'unittest {\n\t$0\n}'
+  'version(ident) { … }':
+    'prefix': 'ver'
+    'body': 'version(${1:Posix}) {\n\t$0\n}'
+  'while(…) { … }':
+    'prefix': 'while'
+    'body': 'while (${1:condition}) {\n\t$0\n}'

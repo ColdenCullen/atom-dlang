@@ -1,0 +1,4 @@
+'.source.d':
+  'editor':
+    'increaseIndentPattern': '^.*\\{[^}"\']*$|^\\s*(public|private|protected):\\s*$'
+    'decreaseIndentPattern': '^(.*\\*/)?\\s*\\}([^}{"\']*\\{)?[;\\s]*(//.*|/\\*.*\\*/\\s*)?$|^\\s*(public|private|protected):\\s*$'
