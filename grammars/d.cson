@@ -369,7 +369,7 @@
       }
     ]
   'storage-type-d':
-    'match': '\\b(void|byte|short|char|dchar|wchar|int|long|string|float|double|boolean|([a-z]\\w+\\.)*[A-Z]\\w+)\\b'
+    'match': '\\b(void|byte|short|char|dchar|wchar|int|long|string|float|double|bool|([a-z]\\w+\\.)*[A-Z]\\w+)\\b'
     'name': 'storage.type.d'
   'string_escaped_char':
     'patterns': [
