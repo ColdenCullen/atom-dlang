@@ -17,7 +17,7 @@
     'include': 'text.html.javadoc'
   }
   {
-    'begin': '(?x)^\\s*\n\t\t\t\t\t((?:\\b(public|private|protected|static|final|native|synchronized|abstract|export)\\b\\s*)*) # modifier\n\t\t\t\t\t(class|interface)\\s+\n\t\t\t\t\t(\\w+)\\s* # identifier\n\t\t\t\t\t(?:\\(\\s*([^\\)]+)\\s*\\)|)\\s* # Template type\n\t\t\t\t\t(?:\n\t\t\t\t\t  \\s*(:)\\s*\n\t\t\t\t\t  (\\w+)\n\t\t\t\t\t  (?:\\s*,\\s*(\\w+))?\n\t\t\t\t\t  (?:\\s*,\\s*(\\w+))?\n\t\t\t\t\t  (?:\\s*,\\s*(\\w+))?\n\t\t\t\t\t  (?:\\s*,\\s*(\\w+))?\n\t\t\t\t\t  (?:\\s*,\\s*(\\w+))?\n\t\t\t\t\t  (?:\\s*,\\s*(\\w+))?\n\t\t\t\t\t)? # super class\n\t\t\t\t\t'
+    'begin': '(?x)^\\s*\n\t\t\t\t\t((?:\\b(public|private|protected|static|final|native|synchronized|shared|abstract|export)\\b\\s*)*) # modifier\n\t\t\t\t\t(class|interface)\\s+\n\t\t\t\t\t(\\w+)\\s* # identifier\n\t\t\t\t\t(?:\\(\\s*([^\\)]+)\\s*\\)|)\\s* # Template type\n\t\t\t\t\t(?:\n\t\t\t\t\t  \\s*(:)\\s*\n\t\t\t\t\t  (\\w+)\n\t\t\t\t\t  (?:\\s*,\\s*(\\w+))?\n\t\t\t\t\t  (?:\\s*,\\s*(\\w+))?\n\t\t\t\t\t  (?:\\s*,\\s*(\\w+))?\n\t\t\t\t\t  (?:\\s*,\\s*(\\w+))?\n\t\t\t\t\t  (?:\\s*,\\s*(\\w+))?\n\t\t\t\t\t  (?:\\s*,\\s*(\\w+))?\n\t\t\t\t\t)? # super class\n\t\t\t\t\t'
     'beginCaptures':
       '1':
         'name': 'storage.modifier.d'
@@ -155,7 +155,7 @@
     'name': 'storage.modifier.access-control.d'
   }
   {
-    'match': '\\b(auto|static|override|final|const|abstract|volatile|synchronized|lazy)\\b'
+    'match': '\\b(shared|auto|static|override|final|const|abstract|volatile|synchronized|lazy)\\b'
     'name': 'storage.modifier.d'
   }
   {
