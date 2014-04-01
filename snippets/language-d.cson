@@ -35,24 +35,6 @@
   'import …':
     'prefix': 'im'
     'body': 'import ${1:${TM_FILEPATH/.+\\/([^\\/]+)\\/[^\\/]+\\.d$/\\l$1/}.};'
-  'log.error(…)':
-    'prefix': 'loge'
-    'body': 'log.error("$1");'
-  'log.fatal(…)':
-    'prefix': 'logf'
-    'body': 'log.fatal("$1");'
-  'log.info(…)':
-    'prefix': 'log'
-    'body': 'log.info("$1");'
-  'log.trace(…)':
-    'prefix': 'logt'
-    'body': 'log.trace("$1");'
-  'log.warn(…)':
-    'prefix': 'logw'
-    'body': 'log.warn("$1");'
-  'Logger for Module':
-    'prefix': 'logger'
-    'body': 'import tango.util.log.Log, tango.util.log.Configurator;\n\nprotected static Logger log = null;\nstatic this() {\n\tlog = Log.getLogger(${1:__FILE__});${2:\n\t//log.setLevel(log.Level.${3:Info});}\n}'
   'int main(char[][] args) { … }':
     'prefix': 'maina'
     'body': 'int main(char[][] args)\n{\n\t$1\n\treturn 0;\n}'
@@ -62,12 +44,6 @@
   'method … { … }':
     'prefix': 'me'
     'body': '/**\n * $2\n */\n${1:void} ${2:method}()\n{\n\t${3}\n}'
-  'Stdout(format, …)':
-    'prefix': 'outf'
-    'body': 'Stdout.format("${1:foo = {\\}}", $2).newline;'
-  'Stdout(…)':
-    'prefix': 'out'
-    'body': 'Stdout("$1").newline;'
   'return …':
     'prefix': 'r'
     'body': 'return $0;'
