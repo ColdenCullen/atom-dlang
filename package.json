@@ -1,8 +1,8 @@
 {
   "name": "language-d",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "A d language binding for the Atom text editor.",
-  "repository": "https://github.com/atom/language-d",
+  "repository": "https://github.com/ColdenCullen/language-d",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
