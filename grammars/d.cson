@@ -91,7 +91,7 @@
     ]
   }
   {
-    'begin': '(?x)^\\s*\n\t\t\t\t\t((?:\\b(public|private|protected|static|final|native|synchronized|abstract|threadsafe|transient|export)\\b\\s*)*) # modifier\n\t\t\t\t\t(\\b(this))\\s* # identifier\n\t\t\t\t\t(?!.*;)  # abort if line has a ;\n\t\t\t\t\t(?=\\()'
+    'begin': '(?x)^\\s*\n\t\t\t\t\t((?:\\b(public|private|protected|static|final|override|synchronized|abstract|export)\\b\\s*)*) # modifier\n\t\t\t\t\t(\\b(this))\\s* # identifier\n\t\t\t\t\t(?!.*;)  # abort if line has a ;\n\t\t\t\t\t(?=\\()'
     'captures':
       '1':
         'name': 'storage.modifier.d'
@@ -124,7 +124,7 @@
     ]
   }
   {
-    'begin': '(?x)^\\s*\n\t\t\t\t\t((?:\\b(?:public|private|protected|static|final|native|lazy|synchronized|abstract|threadsafe|transient|export)\\b\\s*)*) # modifier\n\t\t\t\t\t(\\b(?:void|bool|byte|char|dchar|wchar|string|short|int|float|long|double|[\\w_]+[\\w0-9_]*|(?:\\w+\\.)*[A-Z]\\w+)\\b(?:<(?:(?:(?:\\w+\\.)*[A-Z]\\w+)(?:\\s*,\\s*)?)+>|(?:\\[\\s*\\])*)?)\\s* # type\n\t\t\t\t\t(\\w+)\\s* # identifier\n\t\t\t\t\t(?!.*;)  # abort if line has a ;\n\t\t\t\t\t(?=\\()'
+    'begin': '(?x)^\\s*\n\t\t\t\t\t((?:\\b(?:public|private|protected|static|final|native|lazy|synchronized|abstract|override|export)\\b\\s*)*) # modifier\n\t\t\t\t\t(\\b(?:void|bool|byte|char|dchar|wchar|string|short|int|float|long|double|[\\w_]+[\\w0-9_]*|(?:\\w+\\.)*[A-Z]\\w+)\\b(?:<(?:(?:(?:\\w+\\.)*[A-Z]\\w+)(?:\\s*,\\s*)?)+>|(?:\\[\\s*\\])*)?)\\s* # type\n\t\t\t\t\t(\\w+)\\s* # identifier\n\t\t\t\t\t(?!.*;)  # abort if line has a ;\n\t\t\t\t\t(?=\\()'
     'beginCaptures':
       '1':
         'name': 'storage.modifier.d'
