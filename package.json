@@ -1,6 +1,6 @@
 {
   "name": "atom-dlang",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A d language binding for the Atom text editor.",
   "repository": "https://github.com/ColdenCullen/atom-dlang",
   "license": "MIT",
